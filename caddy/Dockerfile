@@ -1,4 +1,4 @@
-FROM abiosoft/caddy-docker:latest
+FROM abiosoft/caddy:latest
 LABEL org.freenas.interactive="false"                                         \
       org.freenas.version="1"                                                 \
       org.freenas.upgradeable="false"                                         \
