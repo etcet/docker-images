@@ -39,4 +39,5 @@ LABEL org.freenas.interactive="false"                                         \
           {								                        \
               \"name\": \"/etc/Caddyfile\",				\
               \"descr\": \"Caddy config\"		                              \
-          }"
+          }
+          ]"
