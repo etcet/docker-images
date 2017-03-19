@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM abiosoft/caddy:latest
 LABEL org.freenas.interactive="false"                                         \
       org.freenas.version="1"                                                 \
       org.freenas.upgradeable="false"                                         \
@@ -7,15 +7,15 @@ LABEL org.freenas.interactive="false"                                         \
       org.freenas.port-mappings="80:8080/tcp,443:8081/tcp"                    \
       org.freenas.volumes="[						                  \
           {								                        \
-              \"name\": \"/var/www/html\",					      \
-              \"descr\": \"html content\"		                              \
+              \"name\": \"/etc/Caddyfile\",					      \
+              \"descr\": \"Caddy configuration\"		                              \
           },                                                                  \
           {								                        \
-              \"name\": \"/etc/nginx/conf.d/custom.conf\",				\
-              \"descr\": \"custom conf\"		                              \
+              \"name\": \"/root/.caddy\",				\
+              \"descr\": \"Caddy datastore\"		                              \
           },                                                                  \
           {								                        \
-              \"name\": \"/etc/nginx/conf.d/default.conf\",				\
-              \"descr\": \"default content if interested for port 80\"		\
+              \"name\": \"/var/www/html\",				\
+              \"descr\": \"Default public html directory\"		\
           }                                                                   \
           ]"
